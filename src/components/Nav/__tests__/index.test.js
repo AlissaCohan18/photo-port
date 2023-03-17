@@ -6,16 +6,16 @@ import Nav from '..';
 
 afterEach(cleanup);
 
-describe('Nav component', () => {
+describe('Nav component renders', () => {
     // baseline test
-  it('renders', () => {
-    render(<Nav />);
-  });
+    it('renders', () => {
+      render(<Nav />);
+    });
 
   // snapshot test
   it('matches snapshot', () => {
     const { asFragment } = render(<Nav />);
-
+    
     expect(asFragment()).toMatchSnapshot();
   });
 })
@@ -23,11 +23,11 @@ describe('Nav component', () => {
 //check to see if the emoji, 📸, is visible
 describe('emoji is visible', () => {
   it('inserts emoji into the h2', () => {
-    const { getByLabelText } = render(<Nav />);
+  const { getByLabelText } = render(<Nav />);
 
-    expect(getByLabelText('camera')).toHaveTextContent('📸');
+  expect(getByLabelText('camera')).toHaveTextContent('📸');
   });
-})
+})  
 
 //verify that the text content is being inserted into the <a> tags
 describe('links are visible', () => {

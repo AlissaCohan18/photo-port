@@ -1,4 +1,5 @@
-import React from "react";
+// __tests__/About.test.js
+import React from 'react';
 // The render function will "render" the component. Jest creates a simulated DOM in a Node.js
 // environment to approximate the DOM (no component is actually visibly rendered). The cleanup
 // function is used to remove components from the DOM to prevent memory leaking, as well as variable
@@ -22,9 +23,11 @@ describe('About component renders', () => {
   });
   
   // Second Test
+ 
   it('matches snapshot DOM node structure', () => {
     const { asFragment } = render(<About />);
     
     expect(asFragment()).toMatchSnapshot();
   });
 })
+
